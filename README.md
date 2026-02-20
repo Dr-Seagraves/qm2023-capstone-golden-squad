@@ -16,3 +16,7 @@ Semester-long capstone for Statistics II: Data Analytics.
 - **tests/** — Autograding test suite
 
 Run `python code/config_paths.py` to verify paths.
+
+2/20 Update
+Research Question: How do interest rates/federal fund rates affect unemployment rates across the United States over time?
+Project Idea: We will be analyzing the national federal fund rates and compare that to unemployment rate data across all US states to see if there is any correlation. While the 2 aren't directly linked, we know that interest rates can affect investment, consumer spending, borrowing costs, etc. which in turn can have an effect on unemployment rates.
