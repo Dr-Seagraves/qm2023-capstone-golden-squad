@@ -7,7 +7,9 @@ Semester-long capstone for Statistics II: Data Analytics.
 ## Project Structure
 
 - **code/** — Python scripts and notebooks. Use `config_paths.py` for paths.
+    Fetch data scripts, merge scripts.
 - **data/raw/** — Original data (read-only)
+    Unemployment rates from all 50 states as well as the national federal funds rate over time.
 - **data/processed/** — Intermediate cleaning outputs
 - **data/final/** — M1 output: analysis-ready panel
 - **results/figures/** — Visualizations
