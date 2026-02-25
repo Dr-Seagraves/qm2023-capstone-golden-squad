@@ -10,3 +10,5 @@ jupyter>=1.0.0
 ipython>=7.0.0
 rich>=10.16.2
 python-dotenv>=0.19.0
+requests>=2.25.0
+bls>=0.3.0

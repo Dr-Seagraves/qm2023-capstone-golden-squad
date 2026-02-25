@@ -56,6 +56,11 @@ def load_raw_data():
         'employment_level': 'state_employment_level.csv',
         'labor_force_level': 'state_labor_force_level.csv',
         'private_employment': 'state_private_employment.csv',
+        'total_nonfarm_employment': 'total_nonfarm_employment.csv',
+        'civilian_labor_force': 'civilian_labor_force.csv',
+        'total_private_employment_bls': 'total_private_employment.csv',
+        'manufacturing_employment': 'manufacturing_employment.csv',
+        'cpi_bls': 'cpi.csv',
     }
     
     data = {}
@@ -141,11 +146,19 @@ def create_state_panel(state_unemp, federal_funds, national_unemp, data):
     ).copy()
     
     # Add national supplementary variables (replicate for all states)
-    for state_name, df in [('inflation', 'inflation_cpi'), 
-                           ('recession', 'recession_indicator'),
-                           ('treasury_10y', 'treasury_10y_yield')]:
-        if state_name in data:
-            df_nat = data[state_name].sort_values('date').reset_index(drop=True)
+    national_vars = [
+        ('inflation', 'inflation_cpi'), 
+        ('recession', 'recession_indicator'),
+        ('treasury_10y', 'treasury_10y_yield'),
+        ('total_nonfarm_employment', 'total_nonfarm_employment'),
+        ('civilian_labor_force', 'civilian_labor_force'),
+        ('total_private_employment_bls', 'total_private_employment'),
+        ('manufacturing_employment', 'manufacturing_employment'),
+        ('cpi_bls', 'cpi')
+    ]
+    for key, col in national_vars:
+        if key in data:
+            df_nat = data[key].sort_values('date').reset_index(drop=True)
             # Merge on date (will replicate national values for all states)
             panel = panel.merge(df_nat, on='date', how='left')
     

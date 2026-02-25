@@ -38,6 +38,7 @@ import argparse
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
+import time
 
 try:
     from fredapi import Fred
@@ -266,6 +267,8 @@ def fetch_state_unemployment_rates(fred, start_date='1990-01-01'):
         except Exception as e:
             print(f"  ✗ {state_abbr}: Error - {str(e)[:50]}")
             failed_states.append((state_abbr, str(e)))
+        
+        time.sleep(0.5)
     
     if all_data:
         combined_df = pd.concat(all_data, ignore_index=True)
@@ -301,6 +304,8 @@ def fetch_national_supplementary_data(fred, start_date='1990-01-01'):
     except Exception as e:
         print(f"  ✗ Inflation: {str(e)[:50]}")
     
+    time.sleep(0.5)
+    
     # Recession Indicator
     try:
         data = fred.get_series(RECESSION_INDICATOR_SERIES)
@@ -315,6 +320,8 @@ def fetch_national_supplementary_data(fred, start_date='1990-01-01'):
     except Exception as e:
         print(f"  ✗ Recession Indicator: {str(e)[:50]}")
     
+    time.sleep(0.5)
+    
     # 10-Year Treasury Yield
     try:
         data = fred.get_series(TREASURY_10Y_SERIES)
@@ -328,6 +335,8 @@ def fetch_national_supplementary_data(fred, start_date='1990-01-01'):
         print(f"  ✓ 10-Year Treasury Yield: {len(df):,} observations")
     except Exception as e:
         print(f"  ✗ 10-Year Treasury: {str(e)[:50]}")
+    
+    time.sleep(0.5)
     
     return national_data
 
@@ -352,6 +361,8 @@ def fetch_state_supplementary_series(fred, series_dict, series_name, start_date=
             
         except Exception as e:
             failed_states.append((state_abbr, str(e)))
+        
+        time.sleep(0.5)
     
     if all_data:
         combined_df = pd.concat(all_data, ignore_index=True)
