@@ -106,6 +106,21 @@ The final dataset `data/final/analysis_panel.csv` has:
 - **Panel Type**: Balanced (all states have equal observations)
 - **Format**: Long format (one row per state-month)
 
+## **Supplementary Variables**
+
+- **inflation_cpi**: Consumer Price Index (CPIAUCSL) — national monthly inflation index, replicated across states.
+- **recession_indicator**: NBER recession flag (USRECD) — monthly binary indicator (0/1).
+- **treasury_10y_yield**: 10-year Treasury yield (DGS10) — monthly yield series.
+- **labor_force_participation_rate**: Labor force participation (CIVPART) — national participation rate replicated across states.
+- **manufacturing_employment_share**: Manufacturing employment share — (MMNRNJ / PAYEMS) × 100, derived and merged by date.
+- **construction_employment_share**: Construction employment share — derived from construction employment / total payroll (where available).
+- **unemployment_yoy_change**: Year-over-year change in state unemployment — lag(12) difference.
+- **fed_rate_change**: Monthly first difference of federal funds rate.
+- **unemployment_lagged_1mo**: One-month lag of state unemployment — useful for dynamic models.
+- **unemployment_volatility_12mo**: 12-month rolling standard deviation of unemployment rate — volatility measure.
+
+For implementation details and the full variable reference, see [SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md) and [SUPPLEMENTARY_VARIABLES_GUIDE.md](SUPPLEMENTARY_VARIABLES_GUIDE.md). The enhanced panel and documentation are available at [data/final/analysis_panel_enhanced.csv](data/final/analysis_panel_enhanced.csv) and [data/final/enhanced_panel_data_dictionary.md](data/final/enhanced_panel_data_dictionary.md). The script used to generate these variables is [code/add_supplementary_variables.py](code/add_supplementary_variables.py).
+
 ## Usage Example
 
 ```python
@@ -204,3 +219,8 @@ Golden Squad - QM 2023 Capstone Project
 - [FRED API Documentation](https://fred.stlouisfed.org/docs/api/)
 - [About Federal Funds Rate](https://fred.stlouisfed.org/series/FEDFUNDS)
 - [About Unemployment Rate](https://fred.stlouisfed.org/series/UNRATE)
+
+## Contact Information
+If you have questions, please contact Trenton Diveley, Henry Simon, or Rylan Leathers through UTULSA Microsoft Teams or UTULSA email.
+
+Reign 'Cane
