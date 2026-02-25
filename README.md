@@ -212,6 +212,9 @@ Common issues:
 ## Team
 
 Golden Squad - QM 2023 Capstone Project
+Trenton Diveley
+Henry Simon
+Rylan Leathers
 
 ## Resources
 
