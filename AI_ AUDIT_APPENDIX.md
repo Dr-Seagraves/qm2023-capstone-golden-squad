@@ -14,7 +14,7 @@
 
 ## Verification & Modifications (Disclose • Verify • Critique)
 - **Verify:** Ran the script and made sure all documents, data, etc followed the M1 guidelines provided
-- **Critique:** Not much as of now, had some errors in the organization and structure of the milestone which was then required to be done manually in some regards.
+- **Critique:** Not much as of now, had some errors in the organization and structure of the milestone which was then required to be done manually in some regards. It also had issues downloading data at times, forcing us to use BLS data in addition to FRED data.
 - **Modify:** A full folder of code, data, etc was provided thanks to the GitHub copilot.
 
 ## If No AI Tools Used
