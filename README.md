@@ -102,8 +102,7 @@ qm2023-capstone-golden-squad/
 │   │   └── panel_enhanced.csv
 │   └── final/                     # Analysis-ready output
 │       ├── analysis_panel_enhanced.csv # Main dataset (20,736 observations)
-│       ├── enhanced_panel_data_dictionary.md
-│       └── M1_enhanced_data_quality_report.md
+│       └── enhanced_panel_data_dictionary.md
 ├── results/
 │   ├── figures/                   # Generated visualizations
 │   │   ├── time_series_trends.png
@@ -126,6 +125,7 @@ qm2023-capstone-golden-squad/
 ├── .env                          # Environment variables (API keys)
 ├── .env.example                  # Environment template
 ├── requirements.txt              # Python dependencies
+├── M1_enhanced_data_quality_report.md # Data quality assessment
 └── README.md                     # This file
 ```
 
