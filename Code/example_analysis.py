@@ -27,7 +27,7 @@ from config_paths import FINAL_DATA_DIR, FIGURES_DIR
 
 def load_analysis_panel():
     """Load the analysis-ready panel dataset."""
-    panel_path = FINAL_DATA_DIR / 'analysis_panel.csv'
+    panel_path = FINAL_DATA_DIR / 'analysis_panel_enhanced.csv'
     
     if not panel_path.exists():
         print(f"ERROR: {panel_path} not found!")
@@ -198,11 +198,13 @@ def plot_scatter(panel):
     cbar.set_label('Time (days since epoch)', fontsize=11)
     
     # Add trend line
-    z = np.polyfit(sample['federal_funds_rate'].dropna(), sample['unemployment_rate'].dropna(), 1)
-    p = np.poly1d(z)
-    x_trend = np.linspace(sample['federal_funds_rate'].min(), sample['federal_funds_rate'].max(), 100)
-    ax.plot(x_trend, p(x_trend), "r--", linewidth=2, label=f'Trend line (slope={z[0]:.4f})')
-    ax.legend()
+    sample_clean = sample.dropna(subset=['federal_funds_rate', 'unemployment_rate'])
+    if len(sample_clean) > 1:
+        z = np.polyfit(sample_clean['federal_funds_rate'], sample_clean['unemployment_rate'], 1)
+        p = np.poly1d(z)
+        x_trend = np.linspace(sample_clean['federal_funds_rate'].min(), sample_clean['federal_funds_rate'].max(), 100)
+        ax.plot(x_trend, p(x_trend), "r--", linewidth=2, label=f'Trend line (slope={z[0]:.4f})')
+        ax.legend()
     
     plt.tight_layout()
     fig_path = FIGURES_DIR / 'scatter_unemployment_vs_fedfunds.png'

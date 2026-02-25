@@ -50,9 +50,9 @@ echo ""
 
 echo "2. CHECKING MAIN SCRIPTS"
 echo "───────────────────────────────────────────────────────────────────────────"
-check_file "code/config_paths.py"
-check_file "code/fetch_data.py"
-check_file "code/merge_final_panel.py"
+check_file "Code/config_paths.py"
+check_file "Code/fetch_data.py"
+check_file "Code/merge_final_panel_enhanced.py"
 echo ""
 
 echo "3. CHECKING CONFIGURATION FILES"
@@ -64,8 +64,8 @@ echo ""
 echo "4. CHECKING DOCUMENTATION"
 echo "───────────────────────────────────────────────────────────────────────────"
 check_file "README.md"
-check_file "SETUP_GUIDE.md"
-check_file "QUICKSTART.md"
+check_file "docs/SETUP_GUIDE.md"
+check_file "docs/QUICKSTART.md"
 echo ""
 
 echo "5. CHECKING PYTHON ENVIRONMENT"
@@ -84,12 +84,23 @@ else
 fi
 echo ""
 
-echo "6. CHECKING FRED API KEY"
+echo "6. CHECKING API KEYS"
 echo "───────────────────────────────────────────────────────────────────────────"
 if [ -n "$FRED_API_KEY" ]; then
     echo -e "${GREEN}✓${NC} FRED_API_KEY environment variable set (${#FRED_API_KEY} chars)"
 else
     echo -e "${YELLOW}⚠${NC} FRED_API_KEY environment variable not set"
+    if [ -f ".env" ]; then
+        echo -e "${YELLOW}  Hint: Source .env file with: export \$(cat .env | xargs)${NC}"
+    else
+        echo -e "${YELLOW}  Hint: Create .env file from .env.example${NC}"
+    fi
+fi
+
+if [ -n "$BLS_API_KEY" ]; then
+    echo -e "${GREEN}✓${NC} BLS_API_KEY environment variable set (${#BLS_API_KEY} chars)"
+else
+    echo -e "${YELLOW}⚠${NC} BLS_API_KEY environment variable not set"
     if [ -f ".env" ]; then
         echo -e "${YELLOW}  Hint: Source .env file with: export \$(cat .env | xargs)${NC}"
     else
@@ -102,20 +113,25 @@ echo "════════════════════════�
 echo "NEXT STEPS:"
 echo "═══════════════════════════════════════════════════════════════════════════"
 echo ""
-echo "1. If you haven't already, get your FRED API key:"
-echo "   → https://fred.stlouisfed.org/docs/api/api_key.html"
+echo "1. If you haven't already, get your API keys:"
+echo "   → FRED: https://fred.stlouisfed.org/docs/api/api_key.html"
+echo "   → BLS: https://www.bls.gov/developers/"
 echo ""
-echo "2. Set your API key:"
-echo "   → export FRED_API_KEY=your_key_here"
+echo "2. Set your API keys:"
+echo "   → export FRED_API_KEY=your_fred_key_here"
+echo "   → export BLS_API_KEY=your_bls_key_here"
 echo "   OR edit .env and run: export \$(cat .env | xargs)"
 echo ""
 echo "3. Fetch data from FRED:"
-echo "   → python code/fetch_data.py"
+echo "   → python Code/fetch_data.py"
 echo ""
-echo "4. Create analysis panel:"
-echo "   → python code/merge_final_panel.py"
+echo "4. Fetch supplementary data from BLS (optional):"
+echo "   → python Code/fetch_bls_data.py"
 echo ""
-echo "5. Check your data in data/final/analysis_panel.csv"
+echo "5. Create analysis panel:"
+echo "   → python Code/merge_final_panel_enhanced.py"
 echo ""
-echo "For more information, see QUICKSTART.md or SETUP_GUIDE.md"
+echo "5. Check your data in data/final/analysis_panel_enhanced.csv"
+echo ""
+echo "For more information, see docs/QUICKSTART.md or docs/SETUP_GUIDE.md"
 echo "═══════════════════════════════════════════════════════════════════════════"

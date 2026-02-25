@@ -8,46 +8,55 @@
 # 1. Get API key (free)
 # Visit: https://fred.stlouisfed.org/docs/api/api_key.html
 
-# 2. Create .env file with your key
+# 2. Create .env file with your keys
 cp .env.example .env
-# Edit .env: replace 'your_api_key_here_replace_this' with your actual key
+# Edit .env: replace the placeholder keys with your actual keys:
+# - FRED_API_KEY=your_actual_fred_key
+# - BLS_API_KEY=your_actual_bls_key
 
 # 3. Verify setup
-python code/config_paths.py
+python Code/config_paths.py
 ```
 
 ---
 
 ## 🚀 Run Analysis Pipeline (Every Time)
 
-### Step 1: Fetch Data (10-15 minutes)
+### Step 1: Fetch Core Data from FRED (10-15 minutes)
 ```bash
-python code/fetch_data.py
+python Code/fetch_data.py
 ```
 **Output**: Raw data files in `data/raw/`
-- federal_funds_rate.csv (408 observations)
-- national_unemployment_rate.csv (408 observations)  
-- state_unemployment_rates.csv (20,400 observations)
+- federal_funds_rate.csv (433 observations)
+- national_unemployment_rate.csv (433 observations)  
+- state_unemployment_rates.csv (20,736 observations)
 
-### Step 2: Create Analysis Panel (1 minute)
+### Step 2: Fetch Supplementary Data from BLS (Optional, 2-3 minutes)
 ```bash
-python code/merge_final_panel.py
+python Code/fetch_bls_data.py
+```
+**Output**: Additional raw data files in `data/raw/`
+- cpi.csv, total_nonfarm_employment.csv, etc.
+
+### Step 3: Create Analysis Panel (1 minute)
+```bash
+python Code/merge_final_panel_enhanced.py
 ```
 **Output**: Analysis-ready files in `data/final/`
-- analysis_panel.csv (20,400 observations) ← **Use this for analysis!**
-- M1_data_quality_report.md
+- analysis_panel_enhanced.csv (20,736 observations) ← **Use this for analysis!**
+- M2_enhanced_data_quality_report.md
 
 ---
 
 ## 📊 Your Main Dataset
 
-**File**: `data/final/analysis_panel.csv`
+**File**: `data/final/analysis_panel_enhanced.csv`
 
 **Structure**:
-| date | state | unemployment_rate | national_unemployment_rate | federal_funds_rate |
-|------|-------|---|---|---|
-| 1990-01-01 | AL | 6.17 | 5.3 | 5.86 |
-| 1990-01-01 | AK | 8.47 | 5.3 | 5.86 |
+| date | state | unemployment_rate | national_unemployment_rate | federal_funds_rate | inflation_cpi | recession_indicator | treasury_10y_yield | ... |
+|------|-------|---|---|---|---|---|---|---|---|
+| 1990-01-01 | AL | 6.17 | 5.3 | 5.86 | 127.5 | 0 | NaN | ... |
+| 1990-01-01 | AK | 8.47 | 5.3 | 5.86 | 127.5 | 0 | NaN | ... |
 | ... | ... | ... | ... | ... |
 
 **Stats**:

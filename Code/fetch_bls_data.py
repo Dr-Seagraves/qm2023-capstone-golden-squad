@@ -57,7 +57,13 @@ def fetch_bls_series(series_id, name, api_key, start_year=1990, end_year=2025):
         return None
 
 def main():
-    api_key = 'd36f737633774bca9ae50bba8ee46526'  # User's BLS API key
+    # Get BLS API key from environment
+    api_key = os.getenv('BLS_API_KEY')
+    if not api_key:
+        print("ERROR: BLS_API_KEY environment variable not set!")
+        print("Please set it with: export BLS_API_KEY=your_key_here")
+        print("Or add it to your .env file")
+        return 1
     
     RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
     

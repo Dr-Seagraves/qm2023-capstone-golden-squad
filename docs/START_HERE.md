@@ -24,7 +24,20 @@
 
 ---
 
-### Step 2: Set Your API Key ⏰ 1 min
+### Step 2: Get Your Free BLS API Key ⏰ 2 min
+```
+1. Go to: https://www.bls.gov/developers/
+2. Click "Request a Key"
+3. Fill out the form and submit
+4. Check your email for your API key
+5. Save it somewhere (you'll use it in 5 minutes)
+```
+
+**Status**: ☐ Done
+
+---
+
+### Step 3: Set Your API Keys ⏰ 1 min
 Pick ONE method:
 
 **Method A: Edit .env file** (Recommended)
@@ -37,16 +50,18 @@ cd /workspaces/qm2023-capstone-golden-squad
 cat .env.example
 
 # 3. Edit the file (click on .env.example in VS Code, change it, save as .env)
-# Replace: your_api_key_here_replace_this
-# With: YOUR_ACTUAL_KEY_FROM_EMAIL
+# Replace the placeholder keys with your actual keys:
+# - FRED_API_KEY=your_actual_fred_key
+# - BLS_API_KEY=your_actual_bls_key
 
 # 4. Then run:
 export $(cat .env | xargs)
 ```
 
-**Method B: Set environment variable directly**
+**Method B: Set environment variables directly**
 ```bash
-export FRED_API_KEY=your_actual_api_key_here
+export FRED_API_KEY=your_actual_fred_api_key_here
+export BLS_API_KEY=your_actual_bls_api_key_here
 ```
 
 **Status**: ☐ Done
