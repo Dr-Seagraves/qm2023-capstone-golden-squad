@@ -6,8 +6,8 @@ This script demonstrates how to use the analysis_panel.csv dataset
 for exploratory analysis and basic regressions.
 
 Run after:
-  1. python code/fetch_data.py
-  2. python code/merge_final_panel.py
+    1. python Code/fetch_data.py
+    2. python Code/merge_final_panel.py
 """
 
 import pandas as pd
@@ -18,7 +18,7 @@ from pathlib import Path
 import sys
 
 # Add code directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent / 'code'))
+sys.path.insert(0, str(Path(__file__).parent))
 from config_paths import FINAL_DATA_DIR, FIGURES_DIR
 
 # ==============================================================================
@@ -32,8 +32,8 @@ def load_analysis_panel():
     if not panel_path.exists():
         print(f"ERROR: {panel_path} not found!")
         print("Please run:")
-        print("  1. python code/fetch_data.py")
-        print("  2. python code/merge_final_panel.py")
+        print("  1. python Code/fetch_data.py")
+        print("  2. python Code/merge_final_panel.py")
         sys.exit(1)
     
     panel = pd.read_csv(panel_path)
