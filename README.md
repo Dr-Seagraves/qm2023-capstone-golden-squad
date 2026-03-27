@@ -28,6 +28,12 @@ We analyze the relationship between the national Federal Funds Rate and unemploy
 
 ## Quick Start
 
+### 0. Recommended VS Code Extensions (Optional but Helpful)
+- `ms-python.python` (Python language support, environment tooling, linting)
+- `ms-toolsai.jupyter` (Notebook editor support for `capstone_eda.ipynb`)
+
+These extensions do **not** change project outputs or grading results by themselves. They improve local editing and notebook execution UX.
+
 ### 1. Get Your FRED API Key (5 minutes)
 - Visit: [https://fred.stlouisfed.org/docs/api/api_key.html](https://fred.stlouisfed.org/docs/api/api_key.html)
 - Click "Request API Key" and sign up (free account)
@@ -53,7 +59,7 @@ export BLS_API_KEY=YOUR_BLS_API_KEY_HERE
 
 ### 4. Fetch Data from FRED
 ```bash
-python code/fetch_data.py
+python Code/fetch_data.py
 ```
 This downloads Federal Funds Rate and unemployment data for all 50 states.
 
@@ -65,9 +71,23 @@ This downloads additional economic indicators from the Bureau of Labor Statistic
 
 ### 6. Create Analysis Panel
 ```bash
-python code/merge_final_panel_enhanced.py
+python Code/merge_final_panel_enhanced.py
 ```
 This merges raw FRED data into an analysis-ready panel dataset stored in `data/final/analysis_panel_enhanced.csv`.
+
+### 7. Run Milestone 2 EDA (M2)
+```bash
+jupyter nbconvert --to notebook --execute capstone_eda.ipynb --output capstone_eda.ipynb
+```
+This executes the M2 notebook top-to-bottom and saves all required M2 visualizations to `results/figures/`.
+
+If you prefer running inside VS Code with the Jupyter extension, use **Restart Kernel and Run All** in `capstone_eda.ipynb`.
+
+### 8. Known-Good Notebook Workflow (VS Code)
+- Select your Python interpreter first (Command Palette: Python: Select Interpreter).
+- Open `capstone_eda.ipynb` and select that same environment as the notebook kernel.
+- Run **Restart Kernel and Run All** before submission to confirm reproducibility.
+- Confirm all M2 plots are present in `results/figures/` and reports are present in both root and `results/reports/`.
 
 **Total time:** ~10-15 minutes depending on internet speed
 
@@ -105,11 +125,19 @@ qm2023-capstone-golden-squad/
 │       └── enhanced_panel_data_dictionary.md
 ├── results/
 │   ├── figures/                   # Generated visualizations
-│   │   ├── time_series_trends.png
-│   │   ├── state_unemployment_distribution.png
-│   │   └── scatter_unemployment_vs_fedfunds.png
+│   │   ├── M2_plot1_correlation_heatmap.png
+│   │   ├── M2_plot2_outcome_timeseries.png
+│   │   ├── M2_plot3_dual_axis_unemp_fedfunds.png
+│   │   ├── M2_plot4_lagged_effects.png
+│   │   ├── M2_plot5_group_boxplot_region.png
+│   │   ├── M2_plot6_group_sensitivity_region.png
+│   │   ├── M2_plot7_scatter_controls.png
+│   │   ├── M2_plot8_decomposition.png
+│   │   └── (plus exploratory figures from M1 work)
 │   ├── tables/                    # Regression tables
 │   └── reports/                   # Milestone memos and reports
+│       ├── M2_EDA_summary.md
+│       └── AI_AUDIT_APPENDIX.md
 ├── docs/                          # Documentation
 │   ├── START_HERE.md             # Step-by-step setup guide
 │   ├── QUICKSTART.md             # Quick reference guide
@@ -122,6 +150,8 @@ qm2023-capstone-golden-squad/
 │   └── test_reproducibility.py    # Reproducibility verification
 ├── AI_Chat_Logs/                  # Development logs
 ├── AI_AUDIT_APPENDIX.md          # AI assistance documentation
+├── M2_EDA_summary.md             # Milestone 2 EDA interpretation summary
+├── capstone_eda.ipynb            # Milestone 2 EDA notebook deliverable
 ├── .env                          # Environment variables (API keys)
 ├── .env.example                  # Environment template
 ├── requirements.txt              # Python dependencies
@@ -213,7 +243,7 @@ The final dataset `data/final/analysis_panel_enhanced.csv` has:
 - **unemployment_lagged_1mo**: One-month lag of state unemployment — useful for dynamic models.
 - **unemployment_volatility_12mo**: 12-month rolling standard deviation of unemployment rate — volatility measure.
 
-For implementation details and the full variable reference, see [SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md) and [SUPPLEMENTARY_VARIABLES_GUIDE.md](SUPPLEMENTARY_VARIABLES_GUIDE.md). The enhanced panel and documentation are available at [data/final/analysis_panel_enhanced.csv](data/final/analysis_panel_enhanced.csv) and [data/final/enhanced_panel_data_dictionary.md](data/final/enhanced_panel_data_dictionary.md). The script used to generate these variables is [code/add_supplementary_variables.py](code/add_supplementary_variables.py).
+For implementation details and the full variable reference, see [SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md) and [SUPPLEMENTARY_VARIABLES_GUIDE.md](SUPPLEMENTARY_VARIABLES_GUIDE.md). The enhanced panel and documentation are available at [data/final/analysis_panel_enhanced.csv](data/final/analysis_panel_enhanced.csv) and [data/final/enhanced_panel_data_dictionary.md](data/final/enhanced_panel_data_dictionary.md). The script used to generate these variables is [Code/add_supplementary_variables.py](Code/add_supplementary_variables.py).
 
 ## Usage Example
 
@@ -253,6 +283,13 @@ plt.savefig('results/figures/trends.png', dpi=300, bbox_inches='tight')
 - ✓ Data quality report: `M1_enhanced_data_quality_report.md`
 - ✓ Supplementary variables implemented (15 total variables)
 
+### ✅ **M2 Deliverables (EDA Dashboard) - COMPLETED**
+- ✓ EDA notebook created and validated (`capstone_eda.ipynb`)
+- ✓ 8 required M2 visualizations generated and saved to `results/figures/`
+- ✓ M2 interpretation summary completed (`M2_EDA_summary.md`)
+- ✓ AI audit appendix updated for M1 + M2 (`AI_AUDIT_APPENDIX.md`)
+- ✓ Report copies stored in `results/reports/` for submission packaging
+
 ### ✅ **Setup & Reproducibility - VERIFIED**
 - ✓ Automated setup verification script (`Code/verify_setup.sh`)
 - ✓ Reproducibility testing (`tests/test_reproducibility.py`)
@@ -269,6 +306,8 @@ plt.savefig('results/figures/trends.png', dpi=300, bbox_inches='tight')
 ### Data & Methodology
 - **[data/final/enhanced_panel_data_dictionary.md](data/final/enhanced_panel_data_dictionary.md)** — Complete variable definitions
 - **[M1_enhanced_data_quality_report.md](M1_enhanced_data_quality_report.md)** — Data quality assessment
+- **[capstone_eda.ipynb](capstone_eda.ipynb)** — M2 EDA notebook (required visualizations + interpretation)
+- **[M2_EDA_summary.md](M2_EDA_summary.md)** — M2 key findings, hypotheses, and data-quality flags
 - **[docs/SUPPLEMENTARY_VARIABLES_GUIDE.md](docs/SUPPLEMENTARY_VARIABLES_GUIDE.md)** — Supplementary variables documentation
 - **[docs/SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](docs/SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md)** — Implementation details
 
@@ -309,7 +348,7 @@ A: Yes! The scripts are well-documented and designed to be extended. See `Code/e
 A: Panel data regression (Fixed Effects, Random Effects), time series analysis, and hypothesis testing.
 
 **Q: How do I run the analysis?**  
-A: After setup, run `python Code/example_analysis.py` to generate exploratory analysis and visualizations.
+A: For the milestone notebook deliverable, run `jupyter nbconvert --to notebook --execute capstone_eda.ipynb --output capstone_eda.ipynb`. For script-based exploration, run `python Code/example_analysis.py`.
 
 ## Troubleshooting
 
@@ -327,6 +366,30 @@ For detailed troubleshooting, see [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md).
 bash Code/verify_setup.sh
 ```
 This checks your entire setup and provides specific guidance for any issues.
+
+## M2 Submission Checklist
+
+Before pushing to `main`, verify all required M2 files are present:
+
+- `capstone_eda.ipynb`
+- `M2_EDA_summary.md`
+- `AI_AUDIT_APPENDIX.md`
+- `results/figures/M2_plot1_correlation_heatmap.png`
+- `results/figures/M2_plot2_outcome_timeseries.png`
+- `results/figures/M2_plot3_dual_axis_unemp_fedfunds.png`
+- `results/figures/M2_plot4_lagged_effects.png`
+- `results/figures/M2_plot5_group_boxplot_region.png`
+- `results/figures/M2_plot6_group_sensitivity_region.png`
+- `results/figures/M2_plot7_scatter_controls.png`
+- `results/figures/M2_plot8_decomposition.png`
+- `results/reports/M2_EDA_summary.md`
+- `results/reports/AI_AUDIT_APPENDIX.md`
+
+Final pre-push validation:
+
+```bash
+jupyter nbconvert --to notebook --execute capstone_eda.ipynb --output capstone_eda.ipynb
+```
 
 ## Team
 

@@ -18,4 +18,28 @@
 - **Modify:** A full folder of code, data, etc was provided thanks to the GitHub copilot.
 
 ## If No AI Tools Used
+Write: "No AI tools were used for this assignment."\
+
+
+
+# AI Audit Appendix Capstone M2
+
+## Tool(s) Used
+- GitHub Copilot
+
+## Task(s) Where AI Was Used
+- To help code the juipter notebook and update the README file according to the updates done in M2. Also helped summarize all outputs as showin in the M2 EDA Summary.
+
+## Prompt(s)
+- See AI_Chat_Logs Folder
+
+## Output Summary
+- See AI_Chat_Logs Folder
+
+## Verification & Modifications (Disclose • Verify • Critique)
+- **Verify:** Ran the script and made sure all documents, data, etc followed the M2 guidelines provided. Also made sure that the EDA graphs/figures given followed some line of reasoning/economic theory.
+- **Critique:** Not much as of now, had some minor documentation issues and adding of unecessary files that then needed to be cleaned/reorganized later. Also had to do quite a bit of guidance at times/multiple prompts, which is common with AI nowadays, rarely does an AI complete a project perfectly with one prompt.
+- **Modify:** A full EDA notebook and subsequently the figures from the notebook were provided thanks to the GitHub copilot, saving us significant amount of time. 
+
+## If No AI Tools Used
 Write: "No AI tools were used for this assignment."
