@@ -67,7 +67,7 @@ def test_scripts_run():
     try:
         # Test py_compile on main scripts
         import py_compile
-        py_compile.compile('Code/merge_final_panel_enhanced.py', doraise=True)
+        py_compile.compile('code/merge_final_panel_enhanced.py', doraise=True)
         print("✓ Main script compiles OK")
     except py_compile.PyCompileError as e:
         print(f"ERROR: Script compilation failed: {e}")

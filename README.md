@@ -59,19 +59,19 @@ export BLS_API_KEY=YOUR_BLS_API_KEY_HERE
 
 ### 4. Fetch Data from FRED
 ```bash
-python Code/fetch_data.py
+python code/fetch_data.py
 ```
 This downloads Federal Funds Rate and unemployment data for all 50 states.
 
 ### 5. Fetch Supplementary Data from BLS (Optional)
 ```bash
-python Code/fetch_bls_data.py
+python code/fetch_bls_data.py
 ```
 This downloads additional economic indicators from the Bureau of Labor Statistics API.
 
 ### 6. Create Analysis Panel
 ```bash
-python Code/merge_final_panel_enhanced.py
+python code/merge_final_panel_enhanced.py
 ```
 This merges raw FRED data into an analysis-ready panel dataset stored in `data/final/analysis_panel_enhanced.csv`.
 
@@ -89,6 +89,15 @@ If you prefer running inside VS Code with the Jupyter extension, use **Restart K
 - Run **Restart Kernel and Run All** before submission to confirm reproducibility.
 - Confirm all M2 plots are present in `results/figures/` and reports are present in both root and `results/reports/`.
 
+### 9. Run Milestone 3 Econometric Models (M3)
+```bash
+python code/capstone_models.py
+```
+This executes the M3 modeling pipeline and saves:
+- Regression and diagnostics tables to `results/tables/`
+- Diagnostic and model-comparison figures to `results/figures/`
+- Interpretation memo at `M3_interpretation.md` and `results/reports/M3_interpretation.md`
+
 **Total time:** ~10-15 minutes depending on internet speed
 
 ---
@@ -97,11 +106,12 @@ If you prefer running inside VS Code with the Jupyter extension, use **Restart K
 
 ```
 qm2023-capstone-golden-squad/
-├── Code/                           # Main Python scripts
+├── code/                           # Main Python scripts
 │   ├── config_paths.py            # Centralized path configuration
 │   ├── fetch_data.py              # Download data from FRED API
 │   ├── fetch_bls_data.py          # Download supplementary data from BLS API
 │   ├── merge_final_panel_enhanced.py # Create enhanced analysis-ready panel
+│   ├── capstone_models.py         # Milestone 3 econometric models pipeline
 │   ├── example_analysis.py        # Example analysis and visualization
 │   ├── add_supplementary_variables.py # Supplementary variable calculations
 │   ├── verify_setup.sh            # Setup verification script
@@ -133,10 +143,20 @@ qm2023-capstone-golden-squad/
 │   │   ├── M2_plot6_group_sensitivity_region.png
 │   │   ├── M2_plot7_scatter_controls.png
 │   │   ├── M2_plot8_decomposition.png
+│   │   ├── M3_residuals_vs_fitted.png
+│   │   ├── M3_qq_plot.png
+│   │   ├── M3_model_b_performance.png
 │   │   └── (plus exploratory figures from M1 work)
-│   ├── tables/                    # Regression tables
+│   ├── tables/                    # Regression and diagnostics tables
+│   │   ├── M3_regression_table.csv
+│   │   ├── M3_diagnostics_summary.csv
+│   │   ├── M3_vif_table.csv
+│   │   ├── M3_robustness_summary.csv
+│   │   ├── M3_robustness_lag_table.csv
+│   │   └── M3_model_b_ml_comparison.csv
 │   └── reports/                   # Milestone memos and reports
 │       ├── M2_EDA_summary.md
+│       ├── M3_interpretation.md
 │       └── AI_AUDIT_APPENDIX.md
 ├── docs/                          # Documentation
 │   ├── START_HERE.md             # Step-by-step setup guide
@@ -151,6 +171,7 @@ qm2023-capstone-golden-squad/
 ├── AI_Chat_Logs/                  # Development logs
 ├── AI_AUDIT_APPENDIX.md          # AI assistance documentation
 ├── M2_EDA_summary.md             # Milestone 2 EDA interpretation summary
+├── M3_interpretation.md           # Milestone 3 econometric interpretation memo
 ├── capstone_eda.ipynb            # Milestone 2 EDA notebook deliverable
 ├── .env                          # Environment variables (API keys)
 ├── .env.example                  # Environment template
@@ -243,7 +264,7 @@ The final dataset `data/final/analysis_panel_enhanced.csv` has:
 - **unemployment_lagged_1mo**: One-month lag of state unemployment — useful for dynamic models.
 - **unemployment_volatility_12mo**: 12-month rolling standard deviation of unemployment rate — volatility measure.
 
-For implementation details and the full variable reference, see [SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md) and [SUPPLEMENTARY_VARIABLES_GUIDE.md](SUPPLEMENTARY_VARIABLES_GUIDE.md). The enhanced panel and documentation are available at [data/final/analysis_panel_enhanced.csv](data/final/analysis_panel_enhanced.csv) and [data/final/enhanced_panel_data_dictionary.md](data/final/enhanced_panel_data_dictionary.md). The script used to generate these variables is [Code/add_supplementary_variables.py](Code/add_supplementary_variables.py).
+For implementation details and the full variable reference, see [SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md) and [SUPPLEMENTARY_VARIABLES_GUIDE.md](SUPPLEMENTARY_VARIABLES_GUIDE.md). The enhanced panel and documentation are available at [data/final/analysis_panel_enhanced.csv](data/final/analysis_panel_enhanced.csv) and [data/final/enhanced_panel_data_dictionary.md](data/final/enhanced_panel_data_dictionary.md). The script used to generate these variables is [code/add_supplementary_variables.py](code/add_supplementary_variables.py).
 
 ## Usage Example
 
@@ -290,8 +311,19 @@ plt.savefig('results/figures/trends.png', dpi=300, bbox_inches='tight')
 - ✓ AI audit appendix updated for M1 + M2 (`AI_AUDIT_APPENDIX.md`)
 - ✓ Report copies stored in `results/reports/` for submission packaging
 
+### ✅ **M3 Deliverables (Econometric Models) - COMPLETED**
+- ✓ M3 script created and validated (`code/capstone_models.py`)
+- ✓ Model A estimated using two-way Fixed Effects with clustered standard errors
+- ✓ Model B estimated using OLS vs Random Forest comparison
+- ✓ Required diagnostics completed (Breusch-Pagan, VIF, residual diagnostics)
+- ✓ Robustness checks completed (clustered vs unadjusted SE, lag sensitivity, outlier-window exclusion)
+- ✓ M3 tables saved in `results/tables/` (regression, diagnostics, robustness, model comparison)
+- ✓ M3 diagnostic figures saved in `results/figures/`
+- ✓ Interpretation memo completed (`M3_interpretation.md`)
+- ✓ AI audit appendix updated for M3 (`AI_AUDIT_APPENDIX.md`)
+
 ### ✅ **Setup & Reproducibility - VERIFIED**
-- ✓ Automated setup verification script (`Code/verify_setup.sh`)
+- ✓ Automated setup verification script (`code/verify_setup.sh`)
 - ✓ Reproducibility testing (`tests/test_reproducibility.py`)
 - ✓ Complete documentation suite
 - ✓ Environment configuration with API keys
@@ -308,6 +340,8 @@ plt.savefig('results/figures/trends.png', dpi=300, bbox_inches='tight')
 - **[M1_enhanced_data_quality_report.md](M1_enhanced_data_quality_report.md)** — Data quality assessment
 - **[capstone_eda.ipynb](capstone_eda.ipynb)** — M2 EDA notebook (required visualizations + interpretation)
 - **[M2_EDA_summary.md](M2_EDA_summary.md)** — M2 key findings, hypotheses, and data-quality flags
+- **[code/capstone_models.py](code/capstone_models.py)** — M3 econometric pipeline (FE + ML comparison, diagnostics, robustness)
+- **[M3_interpretation.md](M3_interpretation.md)** — M3 coefficient interpretation, diagnostics, robustness, and caveats
 - **[docs/SUPPLEMENTARY_VARIABLES_GUIDE.md](docs/SUPPLEMENTARY_VARIABLES_GUIDE.md)** — Supplementary variables documentation
 - **[docs/SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md](docs/SUPPLEMENTARY_VARIABLES_IMPLEMENTATION.md)** — Implementation details
 
@@ -323,6 +357,7 @@ All Python dependencies are listed in `requirements.txt`:
 - fredapi: FRED API access
 - matplotlib, seaborn: Visualization
 - statsmodels, scikit-learn: Statistical analysis
+- linearmodels: Panel fixed-effects estimation (M3)
 - jupyter: Interactive notebooks
 
 Install with: `pip install -r requirements.txt`
@@ -342,13 +377,13 @@ A: Yes, modify the `start_date` parameter in the fetch scripts. Default is 1990-
 A: The merge script automatically uses the overlapping date range for all states (1990-2025).
 
 **Q: Can I modify the analysis?**  
-A: Yes! The scripts are well-documented and designed to be extended. See `Code/example_analysis.py` for examples.
+A: Yes! The scripts are well-documented and designed to be extended. See `code/example_analysis.py` for examples.
 
 **Q: What statistical methods are you using?**  
-A: Panel data regression (Fixed Effects, Random Effects), time series analysis, and hypothesis testing.
+A: Panel data regression (two-way Fixed Effects with clustered standard errors), robustness checks (lag sensitivity and outlier exclusion), and predictive modeling comparison (OLS vs Random Forest).
 
 **Q: How do I run the analysis?**  
-A: For the milestone notebook deliverable, run `jupyter nbconvert --to notebook --execute capstone_eda.ipynb --output capstone_eda.ipynb`. For script-based exploration, run `python Code/example_analysis.py`.
+A: For M2 notebook deliverables, run `jupyter nbconvert --to notebook --execute capstone_eda.ipynb --output capstone_eda.ipynb`. For M3 econometric outputs, run `python code/capstone_models.py`. For script-based exploration, run `python code/example_analysis.py`.
 
 ## Troubleshooting
 
@@ -363,7 +398,7 @@ For detailed troubleshooting, see [docs/SETUP_GUIDE.md](docs/SETUP_GUIDE.md).
 
 **Verification Script:**
 ```bash
-bash Code/verify_setup.sh
+bash code/verify_setup.sh
 ```
 This checks your entire setup and provides specific guidance for any issues.
 

@@ -1,0 +1,7 @@
+metric,value
+breusch_pagan_lm_stat,66.84762502943751
+breusch_pagan_lm_pvalue,2.0186574158734893e-14
+breusch_pagan_f_stat,22.350930327319666
+breusch_pagan_f_pvalue,1.923888169123393e-14
+residual_mean,3.920691220626709e-17
+residual_std,0.2599719631164175
