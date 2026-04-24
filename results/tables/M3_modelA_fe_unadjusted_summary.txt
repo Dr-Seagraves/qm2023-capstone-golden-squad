@@ -1,0 +1,33 @@
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:      unemployment_rate   R-squared:                        0.9082
+Estimator:                   PanelOLS   R-squared (Between):              0.9977
+No. Observations:               20544   R-squared (Within):               0.8986
+Date:                Wed, Apr 22 2026   R-squared (Overall):              0.9881
+Time:                        20:49:27   Log-likelihood                   -1474.2
+Cov. Estimator:            Unadjusted                                           
+                                        F-statistic:                   6.615e+04
+Entities:                          48   P-value                           0.0000
+Avg Obs:                       428.00   Distribution:                 F(3,20066)
+Min Obs:                       428.00                                           
+Max Obs:                       428.00   F-statistic (robust):          6.615e+04
+                                        P-value                           0.0000
+Time periods:                     428   Distribution:                 F(3,20066)
+Avg Obs:                       48.000                                           
+Min Obs:                       48.000                                           
+Max Obs:                       48.000                                           
+                                                                                
+                                     Parameter Estimates                                      
+==============================================================================================
+                            Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+----------------------------------------------------------------------------------------------
+fedfunds_lag2_x_high_unemp    -0.0042     0.0016    -2.6546     0.0079     -0.0073     -0.0011
+unemployment_lag1              0.9514     0.0022     439.25     0.0000      0.9472      0.9557
+recession_x_high_unemp         0.1241     0.0133     9.3320     0.0000      0.0980      0.1502
+==============================================================================================
+
+F-test for Poolability: 149.87
+P-value: 0.0000
+Distribution: F(474,20066)
+
+Included effects: Entity, Time

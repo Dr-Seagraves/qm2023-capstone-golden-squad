@@ -15,7 +15,7 @@ cp .env.example .env
 # - BLS_API_KEY=your_actual_bls_key
 
 # 3. Verify setup
-python Code/config_paths.py
+python code/config_paths.py
 ```
 
 ---
@@ -24,7 +24,7 @@ python Code/config_paths.py
 
 ### Step 1: Fetch Core Data from FRED (10-15 minutes)
 ```bash
-python Code/fetch_data.py
+python code/fetch_data.py
 ```
 **Output**: Raw data files in `data/raw/`
 - federal_funds_rate.csv (433 observations)
@@ -33,14 +33,14 @@ python Code/fetch_data.py
 
 ### Step 2: Fetch Supplementary Data from BLS (Optional, 2-3 minutes)
 ```bash
-python Code/fetch_bls_data.py
+python code/fetch_bls_data.py
 ```
 **Output**: Additional raw data files in `data/raw/`
 - cpi.csv, total_nonfarm_employment.csv, etc.
 
 ### Step 3: Create Analysis Panel (1 minute)
 ```bash
-python Code/merge_final_panel_enhanced.py
+python code/merge_final_panel_enhanced.py
 ```
 **Output**: Analysis-ready files in `data/final/`
 - analysis_panel_enhanced.csv (20,736 observations) ← **Use this for analysis!**

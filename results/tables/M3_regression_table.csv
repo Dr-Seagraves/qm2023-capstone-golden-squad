@@ -1,0 +1,11 @@
+variable,model1_fe_unadjusted,model1_se,model2_fe_clustered,model2_se,model3_ml
+Fed Funds (lag2) x High-Unemp State,-0.0042***,(0.0016),-0.0042**,(0.0020),
+Unemployment Lag(1),0.9514***,(0.0022),0.9514***,(0.0066),
+Recession x High-Unemp State,0.1241***,(0.0133),0.1241***,(0.0455),
+Entity FE,Yes,,Yes,,State one-hot
+Time FE,Yes,,Yes,,Time split (80/20)
+Clustered SE,No,,Yes (state),,N/A
+N,"20,544",,"20,544",,"Train/Test: 10,608/2,640"
+R2 (within),0.8986,,0.8986,,OLS R2=0.6359; RF R2=0.6277
+RMSE (test),N/A,,N/A,,OLS=1.5000; RF=1.5168
+Notes,SE in parentheses,,"*** p<0.01, ** p<0.05, * p<0.10",,Out-of-sample evaluation
