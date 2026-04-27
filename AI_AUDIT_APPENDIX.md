@@ -67,3 +67,26 @@ Write: "No AI tools were used for this assignment."
 
 ## If No AI Tools Used
 Write: "No AI tools were used for this assignment."\
+
+
+# AI Audit Appendix Capstone M4
+
+## Tool(s) Used
+- GitHub Copilot
+
+## Task(s) Where AI Was Used
+- To help create an outline for the individual addendum template and write some of the main bullet points/outlines for the investment memo. 
+
+## Prompt(s)
+- See AI_Chat_Logs Folder
+
+## Output Summary
+- See AI_Chat_Logs Folder
+
+## Verification & Modifications (Disclose • Verify • Critique)
+- **Verify:** Looked over the memo and addendum templates that were created and made sure they aligned with the rubric/templates provided on HARVEY.
+- **Critique:** None except for the AI having some trouble reading the PDF outlines that were provided initially.
+- **Modify:** The AI was able to produce outlines, however we wanted to edit the individual addendum ourselves. The memo was mostly created and small changes have been made along the way to make sure it is free of error.
+
+## If No AI Tools Used
+Write: "No AI tools were used for this assignment."\

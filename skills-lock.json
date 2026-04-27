@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "investment-memo": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "computedHash": "164ca17d48f2726f13479d2575b336810939ffbdb4d7bfabf79c46b938e98c40"
+    },
+    "outlines": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "computedHash": "1ac7d676390c84af7d3604ed34c8d2e49243f3843124b69f2a5094d6aa853b9f"
+    }
+  }
+}
