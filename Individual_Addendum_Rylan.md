@@ -3,9 +3,9 @@
 
 ---
 
-**Name:** [Your Full Name]  
-**Team:** [Team Name]  
-**Date:** [Submission Date]
+**Name:** [Rylan Leathers]
+**Team:** [Golden Squad]  
+**Date:** [May 1st]
 
 ---
 
@@ -13,15 +13,15 @@
 
 | Milestone | Hours | Role(s) | Key Deliverables |
 |-----------|-------|---------|------------------|
-| **M1: [M1 Title]** | [X] hrs | [Your role(s): e.g., Data Lead, Contributor] | [Specific outputs: e.g., "created `/code/merge_final_panel.py`", "validated data integrity"] |
-| **M2: [M2 Title]** | [X] hrs | [Your role(s)] | [Specific outputs: e.g., "created 5 visualizations", "wrote lag analysis section"] |
-| **M3: [M3 Title]** | [X] hrs | [Your role(s)] | [Specific outputs: e.g., "estimated main regression", "ran diagnostics tests"] |
-| **M4: Policy/Investment Memo** | [X] hrs | [Your role(s)] | [Specific sections: e.g., "Executive Summary", "Results Section", "Risk Analysis"] |
-| **TOTAL** | **[X] hrs** | [Summary role] | [1-sentence overview of your main contribution] |
+| **M1: [Data pipeline]** | [2] hrs | [Data extraction/quailty control] | [Specific outputs: Data Quality Report and process data] |
+| **M2: [EDA]** | [1.5] hrs | [quilty control analyst/ feedback specilaist] | [Specific outputs: EDA reports/figures] |
+| **M3: [Econometric model]** | [1.5] hrs | [execution management/feedback specialist] | [Specific outputs: Econometric models and interpretations] |
+| **M4: Policy/Investment Memo** | [1] hrs | [execution management/feedback specialist] | [Specific sections: Investment meno, presentation, and individual addendum] |
+| **TOTAL** | **[6] hrs** | [quility control/feedback specialist/Data extraction] | [Helped to look over/maintain and give feedback to out team over the new code the ai helped write while also pulling data to give to the AI.  ] |
 
-**Team Contribution:** [X]/[TOTAL_TEAM_HOURS] = [X]% of team workload
+**Team Contribution:** [6]/[22] = [27]% of team workload
 
----
+--- 
 
 ## 2. One Defended Methodological Decision
 
@@ -80,7 +80,7 @@
 
 **What I Did Particularly Well:**
 
-[1-2 sentences with a specific example or skill you developed]
+[I did well at looking back through the assignment as well as asking the AI for help.]
 
 Examples:
 - "I excelled at [skill] when [situation], as evidenced by [concrete outcome]"
@@ -90,7 +90,7 @@ Examples:
 
 **What I Could Have Improved:**
 
-[1-2 sentences about timing, process, or communication—not technical ability]
+[I could have improved on the diffenet task i was asking the AI and how i could have made it more clear. ]
 
 Examples:
 - "I should have [action] earlier instead of [what actually happened], which would have [benefit]"
@@ -100,7 +100,7 @@ Examples:
 
 **Key Learning from This Capstone:**
 
-[2-3 sentences reflecting on insights that transfer beyond this project]
+[I learned teamwork skills regarding AI usage is very helpful and important when working with something of this size. I aslo learned that being able to work with this powerful AI has completly opend my eyes to everything that is capable with AI. ]
 
 Examples:
 - "[Insight about data science/project management/teamwork/your discipline]"
@@ -111,42 +111,11 @@ Examples:
 
 ## 5. AI Tool Usage & Verification
 
-**AI Tools Used:**
-- [Tool name, e.g., ChatGPT]: [Primary use - e.g., "Python syntax for data merging"]
-- [Tool name, e.g., Copilot]: [Primary use - e.g., "Regression specification templates"]
-- [Tool name, e.g., Claude]: [Primary use - e.g., "Interpretation scaffolding"]
 
-**Estimated AI Assistance:** [X]% of [M#] coding / [X]% of [M#] writing
+**Estimated AI Assistance:** [95]% of [all] coding / [80]% of [all] writing
 
-**Verification Examples:**
 
-**Example 1:**
-- **Your prompt:** [What you asked the AI]
-- **AI output:** [What it produced]
-- **Your verification:** [How you tested/validated it]
-- **Correction/critique:** [What you fixed or improved]
-
-**Example 2:**
-- **Your prompt:** [What you asked the AI]
-- **AI output:** [What it produced]
-- **Your verification:** [How you tested/validated it]
-- **Correction/critique:** [What you fixed or improved]
-
-**Example 3 (if applicable):**
-- **Your prompt:** [What you asked the AI]
-- **AI output:** [What it produced]
-- **Your verification:** [How you tested/validated it]
-- **Correction/critique:** [What you fixed or improved]
-
-**Responsibility Statement:**
-
-[Your team's collective AI usage policy - choose relevant option(s)]
-
-Example statements:
-- "AI was used for syntax/formatting assistance only; all analysis written independently"
-- "[X]% of code assisted by AI; [X]% written from scratch; all output verified against expected results"
-- "All interpretations and policy recommendations are team-written; AI provided no content for memo"
-- "Full team responsibility for all findings and recommendations"
+See AI audit 
 
 ---
 
@@ -158,8 +127,8 @@ I affirm that:
 - I understand this addendum may be used to adjust my individual grade
 - I take responsibility for my work
 
-**Signature:** ___________________________  
-**Date:** ___________________________
+**Signature:** ____rylan Leathers________________  
+**Date:** ______04-29-2026____________
 
 ---
 
