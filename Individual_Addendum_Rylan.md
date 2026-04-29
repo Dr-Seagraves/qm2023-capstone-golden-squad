@@ -57,22 +57,22 @@
 
 ## 3. One Key Limitation & Mitigation Strategy
 
-**Limitation:** [State the main assumption or weakness of your analysis]
+**Limitation:** [Lag selection sensitivity]
 
-**Why This Matters:**
+**Why This Matters:** 
 
-- **Core concern:** [What assumption is violated? Under what conditions?]
-- **Potential bias:** [Would this cause your results to be overstated/understated? Why?]
-- **Real example:** [Concrete scenario where this limitation creates a problem]
+- **Core concern:** [small changes in the number of lags lead to big changes in your results]
+- **Potential bias:** [potential bias in your estimates and conclusions and it can creep in from multiple directions depending on how you choose the lag length.]
+- **Real example:** [Suppose you’re studying whether changes in interest rates affect inflation using a time-series model]
 
 **Specific Mitigation Tests (Future Work):**
 
-1. **[Test 1]:** [What robustness check would help - e.g., "Include time-varying state controls and reestimate"]
-2. **[Test 2]:** [Alternative validation - e.g., "Split sample pre/post structural break"]  
-3. **[Test 3]:** [Specification check - e.g., "Use placebo variables to test for omitted bias"]
+1. **[test 1]:** [Lag robustness sweep]
+2. **[Test 2]:** [Structural stability / split-sample test]  
+3. **[Test 3]:** [Residual diagnostics and autocorrelation check]
 
 **Severity Assessment:** [Low/Medium/High]
-- Reasoning: [1-2 sentences on whether this substantially undermines findings]
+- Reasoning: [Medium severity. AI helped fix our errors that we descovered while also showing and telling us why.]
 
 ---
 
@@ -82,30 +82,19 @@
 
 [I did well at looking back through the assignment as well as asking the AI for help.]
 
-Examples:
-- "I excelled at [skill] when [situation], as evidenced by [concrete outcome]"
-- "My strength was [area] - specifically, [example of output/feedback that shows this]"
 
----
 
 **What I Could Have Improved:**
 
 [I could have improved on the diffenet task i was asking the AI and how i could have made it more clear. ]
 
-Examples:
-- "I should have [action] earlier instead of [what actually happened], which would have [benefit]"
-- "I delayed [task] until late in the timeline; in future projects I'll [process change]"
 
----
 
 **Key Learning from This Capstone:**
 
 [I learned teamwork skills regarding AI usage is very helpful and important when working with something of this size. I aslo learned that being able to work with this powerful AI has completly opend my eyes to everything that is capable with AI. ]
 
-Examples:
-- "[Insight about data science/project management/teamwork/your discipline]"
-- "[How this changes your approach to similar problems]"
-- "[Concept you now understand better]"
+
 
 ---
 
