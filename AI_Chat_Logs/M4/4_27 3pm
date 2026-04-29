@@ -1,0 +1,21 @@
+User: Whats the difference between the individual addendum outline and the template. Which one would be better to use for reproducability
+
+GitHub Copilot: Optimizing tool selection...I'll make a short plan, then open both addendum files to compare them.
+
+Created 3 todos
+
+Read [](file:///workspaces/qm2023-capstone-golden-squad/Individual_Addendum_Outline.md)
+
+Read [](file:///workspaces/qm2023-capstone-golden-squad/Individual_Addendum_Template.md)
+
+Marking plan items complete now.
+
+Completed: *Compare Outline vs Template* (2/3)
+
+Progress: Reviewed both files; recommendation below.
+
+- **Outline:** Individual_Addendum_Outline.md — a heavily filled example with concrete text, explicit traceability notes (mentions exact output files, verification examples, and worked-through evidence). Good as a model/example of what a complete addendum looks like.
+
+- **Template:** Individual_Addendum_Template.md — a clean, minimal, placeholder-driven form with structured sections and submission instructions intended for consistent responses across students.
+
+- **Recommendation:** Use the Template for reproducibility (consistency across submissions) but require/encourage students to fill specific reproducibility fields shown in the Outline: exact file paths, commands to reproduce (git commands, scripts, notebook cells), environment/versions, and short verification steps. In short: adopt the Template + enforce the Outline's traceability checklist.
