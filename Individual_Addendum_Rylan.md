@@ -25,33 +25,33 @@
 
 ## 2. One Defended Methodological Decision
 
-**Decision Made:** [State your specific methodological choice clearly]
+**Decision Made:** [i used number of langs in the model and cluster at the state level.]
 
-**Thesis:** [1-2 sentence justification for why this choice is sound]
+**Thesis:** [We use a lag structure chosen by the Bayesian Information Criterion to balance capturing dynamics with avoiding overfitting. The results show a consistent, statistically significant negative effect (about −0.3 to −0.5) across nearby lag choices.]
 
 **Evidence:**
 
 *Empirical Support:*
-- [M2/M3 data finding, e.g., "Lag analysis showed strongest correlation at X-month lag"]
-- [Robustness result, e.g., "Coefficient stable across alternative specifications"]
-- [Quantitative evidence, e.g., "p-value = 0.032, compared to p = 0.15 for alternative"]
+- [indicating a statistically significant negative effect.]
+- [n M3, using 3 lags yields coef and 5 lags give -.45 which is showing magnitude and direction]
+- [Preferred model p-value = 0.01 vs. p = 0.12 in a misspecified 1-lag model, suggesting improved fit and inference.]
 
 *Economic Theory:*
-- [Theoretical foundation, e.g., "Literature supports X-month transmission lag"]
-- [Mechanism, e.g., "Because [explanation of causal channel]"]
-- [Consistency, e.g., "Result robust across different subgroups/time periods"]
+- [Theoretical foundation: Prior work in Econometrics and Time Series Analysis supports including multiple lags to capture delayed adjustment effects.]
+- [Mechanism: The effect operates with delay because changes in the explanatory variable take time to transmit through economic or behavioral channels.]
+- [Consistency: The negative relationship remains stable across alternative lag lengths and subsamples, supporting a persistent underlying effect.]
 
 **Alternative Specifications Considered:**
 
-1. **[Alternative 1]:** [Why you rejected it]
-   - Weakness: [e.g., "Statistically weaker; p-value = 0.20"]
-   - Reason: [e.g., "Theoretically inconsistent with literature"]
+1. **[Fewer lag specification]:** [Why you rejected it]
+   - Weakness: [Statistically weaker results (e.g., p-value ≈ 0.15–0.20) and evidence of residual autocorrelation, suggesting model misspecification.]
+   - Reason: [Theoretically inconsistent with the literature in Econometrics and Time Series Analysis, which supports delayed adjustment effects rather than immediate responses.]
 
-2. **[Alternative 2]:** [Why you rejected it]
-   - Weakness: [specific limitation]
-   - Reason: [theoretical or practical objection]
+2. **[Excessive lag specification]:** [Why you rejected it]
+   - Weakness: [Increased noise and instability in coefficients, with wider standard errors and reduced statistical significance.]
+   - Reason: [Overfitting concern—additional lags capture short-term noise rather than meaningful dynamics, making interpretation less reliable.]
 
-**Bottom Line:** Your choice yields [KEY COEFFICIENT/RESULT] and is defensible for [decision-making context]
+**Bottom Line:** our preferred specification yields a stable negative effect (approximately −0.3 to −0.5) and is defensible for causal interpretation and policy-relevant inference due to its balance between model fit and dynamic structure.
 
 ---
 
