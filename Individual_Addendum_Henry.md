@@ -1,4 +1,4 @@
-# Individual Contribution Statement [TEMPLATE]
+# Individual Contribution Statement
 ## QM 2023 Capstone Project - Milestone 4
 
 ---
@@ -14,7 +14,7 @@
 | Milestone | Hours | Role(s) | Key Deliverables |
 |-----------|-------|---------|------------------|
 | **M1: [Data pipeline]** | [2] hrs | [Data extraction/quailty control] | [Specific outputs: Data Quality Report and process data, importing data] |
-| **M2: [EDA]** | [1.5] hrs | [quilty control analyst/ feedback specilaist] | [Specific outputs: EDA reports/figures] |
+| **M2: [EDA]** | [1.5] hrs | [quilty control analyst/ feedback advisor/report verificiation] | [Specific outputs: EDA reports/figures] |
 | **M3: [Econometric model]** | [1] hrs | [execution management/feedback specialist] | [Specific outputs: Econometric models and interpretations] |
 | **M4: Policy/Investment Memo** | [1.5] hrs | [Presenation Designer/data management/feedback] | [Specific sections: Investment memo, presentation, and individual addendum] |
 | **TOTAL** | **[6] hrs** | [I had a wide variety of roles on the project. I processed data as well as fixed up models, making sure they are not just doing what they are preciving, but what we actually want. I designed the presentation, importing models and stats we thought are key to the project.] |
