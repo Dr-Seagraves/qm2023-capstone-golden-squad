@@ -3,9 +3,9 @@
 
 ---
 
-**Name:** [Your Full Name]  
-**Team:** [Team Name]  
-**Date:** [Submission Date]
+**Name:** [Henry Simon]
+**Team:** [Golden Squad]  
+**Date:** [May 1st]
 
 ---
 
@@ -13,15 +13,15 @@
 
 | Milestone | Hours | Role(s) | Key Deliverables |
 |-----------|-------|---------|------------------|
-| **M1: [M1 Title]** | [X] hrs | [Your role(s): e.g., Data Lead, Contributor] | [Specific outputs: e.g., "created `/code/merge_final_panel.py`", "validated data integrity"] |
-| **M2: [M2 Title]** | [X] hrs | [Your role(s)] | [Specific outputs: e.g., "created 5 visualizations", "wrote lag analysis section"] |
-| **M3: [M3 Title]** | [X] hrs | [Your role(s)] | [Specific outputs: e.g., "estimated main regression", "ran diagnostics tests"] |
-| **M4: Policy/Investment Memo** | [X] hrs | [Your role(s)] | [Specific sections: e.g., "Executive Summary", "Results Section", "Risk Analysis"] |
-| **TOTAL** | **[X] hrs** | [Summary role] | [1-sentence overview of your main contribution] |
+| **M1: [Data pipeline]** | [2] hrs | [Data extraction/quailty control] | [Specific outputs: Data Quality Report and process data, importing data] |
+| **M2: [EDA]** | [1.5] hrs | [quilty control analyst/ feedback specilaist] | [Specific outputs: EDA reports/figures] |
+| **M3: [Econometric model]** | [1] hrs | [execution management/feedback specialist] | [Specific outputs: Econometric models and interpretations] |
+| **M4: Policy/Investment Memo** | [1.5] hrs | [Presenation Designer/data management/feedback] | [Specific sections: Investment memo, presentation, and individual addendum] |
+| **TOTAL** | **[6] hrs** | [I had a wide variety of roles on the project. I processed data as well as fixed up models, making sure they are not just doing what they are preciving, but what we actually want. I designed the presentation, importing models and stats we thought are key to the project.] |
 
-**Team Contribution:** [X]/[TOTAL_TEAM_HOURS] = [X]% of team workload
+**Team Contribution:** [6]/[22] = [27]% of team workload
 
----
+--- 
 
 ## 2. One Defended Methodological Decision
 
@@ -57,13 +57,13 @@
 
 ## 3. One Key Limitation & Mitigation Strategy
 
-**Limitation:** [State the main assumption or weakness of your analysis]
+**Limitation:** [Fixed Effects Time-Invariance Assumption]
 
 **Why This Matters:**
 
-- **Core concern:** [What assumption is violated? Under what conditions?]
-- **Potential bias:** [Would this cause your results to be overstated/understated? Why?]
-- **Real example:** [Concrete scenario where this limitation creates a problem]
+- **Core concern:** [The model assumes that diffrences from state to state do not change or evolve. It assumes they are constant. If employment volitility follows diffrent trends from state to state this could lead to huge differences in the in actual results. ]
+- **Potential bias:** [If high-unemployment states were already improving or declining, this would be considered a change due to monetary policy.]
+- **Real example:** [States with a reliance on heavy manufacturing, could be seen as losing jobs due to monetary policy. However it is just a real change in the economy and the way its changing for manufacturing jobs.]
 
 **Specific Mitigation Tests (Future Work):**
 
@@ -80,73 +80,28 @@
 
 **What I Did Particularly Well:**
 
-[1-2 sentences with a specific example or skill you developed]
-
-Examples:
-- "I excelled at [skill] when [situation], as evidenced by [concrete outcome]"
-- "My strength was [area] - specifically, [example of output/feedback that shows this]"
+I did an excellent job with data assesment, I feel I was able to interpret the output of the model. I was able to identify errors and irradicate them as they occured. These adjustments were critical to the accuracy of our project. 
 
 ---
 
 **What I Could Have Improved:**
 
-[1-2 sentences about timing, process, or communication—not technical ability]
-
-Examples:
-- "I should have [action] earlier instead of [what actually happened], which would have [benefit]"
-- "I delayed [task] until late in the timeline; in future projects I'll [process change]"
-
+I could have spent more time actually auditing the output of the AI. I put a lot of trust on the ability of the Ai to execute the task. 
 ---
 
 **Key Learning from This Capstone:**
 
-[2-3 sentences reflecting on insights that transfer beyond this project]
-
-Examples:
-- "[Insight about data science/project management/teamwork/your discipline]"
-- "[How this changes your approach to similar problems]"
-- "[Concept you now understand better]"
+[I learned teamwork skills regarding AI usage/augmentation. I also learned how to more effectivly prompt the AI. During Milestone three I ran into some errors, with some cleaver prompting I was able to clean them right up. Proper prompting is somthing I will carry forward with me as I continue to develope and use AI skills and platforms.  ]
 
 ---
 
 ## 5. AI Tool Usage & Verification
 
-**AI Tools Used:**
-- [Tool name, e.g., ChatGPT]: [Primary use - e.g., "Python syntax for data merging"]
-- [Tool name, e.g., Copilot]: [Primary use - e.g., "Regression specification templates"]
-- [Tool name, e.g., Claude]: [Primary use - e.g., "Interpretation scaffolding"]
 
-**Estimated AI Assistance:** [X]% of [M#] coding / [X]% of [M#] writing
+**Estimated AI Assistance:** [95]% of [all] coding / [80]% of [all] writing
 
-**Verification Examples:**
 
-**Example 1:**
-- **Your prompt:** [What you asked the AI]
-- **AI output:** [What it produced]
-- **Your verification:** [How you tested/validated it]
-- **Correction/critique:** [What you fixed or improved]
-
-**Example 2:**
-- **Your prompt:** [What you asked the AI]
-- **AI output:** [What it produced]
-- **Your verification:** [How you tested/validated it]
-- **Correction/critique:** [What you fixed or improved]
-
-**Example 3 (if applicable):**
-- **Your prompt:** [What you asked the AI]
-- **AI output:** [What it produced]
-- **Your verification:** [How you tested/validated it]
-- **Correction/critique:** [What you fixed or improved]
-
-**Responsibility Statement:**
-
-[Your team's collective AI usage policy - choose relevant option(s)]
-
-Example statements:
-- "AI was used for syntax/formatting assistance only; all analysis written independently"
-- "[X]% of code assisted by AI; [X]% written from scratch; all output verified against expected results"
-- "All interpretations and policy recommendations are team-written; AI provided no content for memo"
-- "Full team responsibility for all findings and recommendations"
+See AI audit 
 
 ---
 
@@ -158,8 +113,8 @@ I affirm that:
 - I understand this addendum may be used to adjust my individual grade
 - I take responsibility for my work
 
-**Signature:** ___________________________  
-**Date:** ___________________________
+**Signature:** ____Henry Simon________________  
+**Date:** ______04-29-2026____________
 
 ---
 
