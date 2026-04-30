@@ -335,7 +335,7 @@ All analysis, code, and policy recommendations in this memo have been verified b
 ---
 
 **Team Members:**
-Trenton (Lead), [Team Member 2], [Team Member 3], [Team Member 4]
+Trenton Diveley, Rylan Leathers, Henry Simon
 
 **Submission Date:** May 1, 2026
 
