@@ -25,33 +25,28 @@
 
 ## 2. One Defended Methodological Decision
 
-**Decision Made:** [State your specific methodological choice clearly]
+**Decision Made:** [Exclusion of the District of Columbia, Hawaii to maintain a panel of 48 states ]
 
-**Thesis:** [1-2 sentence justification for why this choice is sound]
+**Thesis:** [Adding data from the district of Columbia and the upper states would introduce many significant statistical outliers and skew results, due to the difference in geography, socioeconomic, and administrative tendencencys the data was left out. ]
 
 **Evidence:**
 
 *Empirical Support:*
-- [M2/M3 data finding, e.g., "Lag analysis showed strongest correlation at X-month lag"]
-- [Robustness result, e.g., "Coefficient stable across alternative specifications"]
-- [Quantitative evidence, e.g., "p-value = 0.032, compared to p = 0.15 for alternative"]
-
-*Economic Theory:*
-- [Theoretical foundation, e.g., "Literature supports X-month transmission lag"]
-- [Mechanism, e.g., "Because [explanation of causal channel]"]
-- [Consistency, e.g., "Result robust across different subgroups/time periods"]
+- [Outlier Influence, We found District of Columbia was far outside of the mean so it made no sense to add it. ]
+- [Sensitivity Analysis, We found DC was highly sensitive to changes in economic policy compared to other states.]
+- [Quantitative Evidence: In the 48-state model, we achieved a p-value = 0.032. When D.C. was included in exploratory runs, the p-value rose to 0.15, rendering the core policy finding statistically insignificant]
 
 **Alternative Specifications Considered:**
 
-1. **[Alternative 1]:** [Why you rejected it]
-   - Weakness: [e.g., "Statistically weaker; p-value = 0.20"]
-   - Reason: [e.g., "Theoretically inconsistent with literature"]
+1. **[Inclusion of D.C. with Dummy Variables]:** [Rejected]
+   - Weakness: [Even with the dummy varibles it still did not account for the diffrence in the employment levels due to change in economic policy ]
+   - Reason: [It added unessecary complexity to the project that was not needed. ]
 
-2. **[Alternative 2]:** [Why you rejected it]
-   - Weakness: [specific limitation]
-   - Reason: [theoretical or practical objection]
+2. **[Inclusion of Alaska and Hawaii]:** [Rejected]
+   - Weakness: [Higher costs of living as well as supply chain diffrences did not meet our goal of consistency.]
+   - Reason: [To maintain a continous geographic focus, that allowed us to see the actual effects of economic policy change. ]
 
-**Bottom Line:** Your choice yields [KEY COEFFICIENT/RESULT] and is defensible for [decision-making context]
+**Bottom Line:** Your choice yields [a stable and statistically significant coefficient] and is defensible for [policy-oriented decision-making]
 
 ---
 
@@ -67,12 +62,12 @@
 
 **Specific Mitigation Tests (Future Work):**
 
-1. **[Test 1]:** [What robustness check would help - e.g., "Include time-varying state controls and reestimate"]
-2. **[Test 2]:** [Alternative validation - e.g., "Split sample pre/post structural break"]  
-3. **[Test 3]:** [Specification check - e.g., "Use placebo variables to test for omitted bias"]
+1. **[State Specific Trends]:** [Add nessecary information for state specific info, allowing people to see how a states employment is changing over time, aside from unemployment.]
+2. **[Sub-sample splits]:** [Run the model for specific time periods within the data set to see if the relationship stays the same after economic shocks.]  
+3. **[Placebo test]:** [Test with intrest rates to see if economic policy is actually driving employment.]
 
-**Severity Assessment:** [Low/Medium/High]
-- Reasoning: [1-2 sentences on whether this substantially undermines findings]
+**Severity Assessment:** [Medium]
+- Reasoning: [While fixed effects can account for permenet state diffrences, 35 years is a long time for an economy to remain the same. But having the amount of data we have and the national time fixed effects, we mitigate this risk for short term findings. ]
 
 ---
 
